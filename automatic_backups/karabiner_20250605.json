@@ -1238,6 +1238,7 @@
                 }
             ],
             "name": "HHKB",
+            "selected": true,
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"
@@ -1448,7 +1449,6 @@
                 }
             ],
             "name": "HHKB-Internal-Off",
-            "selected": true,
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"
