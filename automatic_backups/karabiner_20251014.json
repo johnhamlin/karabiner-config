@@ -1049,6 +1049,22 @@
                 },
                 "rules": [
                     {
+                        "description": "Tab → Tab when tapped, Hyper when *held*",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "tab" },
+                                "to_if_alone": [{ "key_code": "tab" }],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": ["left_command", "left_option", "left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Change left_control to hyper when held down",
                         "enabled": false,
                         "manipulators": [
@@ -1069,6 +1085,7 @@
                     },
                     {
                         "description": "Change tab to tab when pressed alone, hyper when held down",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
@@ -1247,10 +1264,26 @@
         {
             "complex_modifications": {
                 "parameters": {
-                    "basic.to_if_alone_timeout_milliseconds": 250,
-                    "basic.to_if_held_down_threshold_milliseconds": 200
+                    "basic.to_if_alone_timeout_milliseconds": 500,
+                    "basic.to_if_held_down_threshold_milliseconds": 250
                 },
                 "rules": [
+                    {
+                        "description": "Tab → Tab when tapped, Hyper when *held*",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "tab" },
+                                "to_if_alone": [{ "key_code": "tab" }],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": ["left_command", "left_option", "left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
                     {
                         "description": "Change left_control to hyper when held down",
                         "enabled": false,
@@ -1272,6 +1305,7 @@
                     },
                     {
                         "description": "Change tab to tab when pressed alone, hyper when held down",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
